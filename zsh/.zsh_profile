@@ -1,6 +1,5 @@
 # C-F to fuzzy find into main directories
 bindkey -s ^f "tmux-sessionizer\n"
 
-
 # Add .local/bin to path
-export PATH=~/.local/bin/:$PATH
+export PATH=$HOME/.local/scripts:$PATH
