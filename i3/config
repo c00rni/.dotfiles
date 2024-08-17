@@ -274,3 +274,4 @@ exec bitwarden
 
 # Used "arandr" cmd to copy configuration of screen placement
 exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --off
+exec_always feh --bg-scale $HOME/wallpaper.webp
