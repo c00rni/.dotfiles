@@ -15,9 +15,9 @@ set $mod Mod1
 # is used in the bar {} block below.
 font pango:monospace 15px
 
-# GET DEM BORDERS OUT OF HEREc:w
+# GET DEM BORDERS OUT OF HERE
 #
-# Thanks Childz
+# Thanks Child
 for_window [class="^.*"] border pixel 2
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
@@ -240,19 +240,19 @@ bindsym $mod+Shift+n exec --no-startup-id ~/dotfiles/bin/resolution
 
 # FKeys
 # Media volume controls
-bindsym $mod+' exec amixer set Master 10%- #increase sound volume
-bindsym $mod+shift+' exec amixer set Master 10%+ #decrease sound volume
+#bindsym $mod+Shift+p exec amixer set Master 10%- #increase sound volume
+#bindsym $mod+p exec amixer set Master 10%+ #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 #
 # # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Alsa audio controls.
-bindsym $mod+Shift+comma exec ~/.config/i3/scripts/alsa restore
-bindsym $mod+semicolon exec ~/.config/i3/scripts/alsa down Headphone
-bindsym $mod+comma exec ~/.config/i3/scripts/alsa up Headphone
-bindsym $mod+m move workspace to output left
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Suspend
 bindsym $mod+Shift+period exec systemctl suspend
