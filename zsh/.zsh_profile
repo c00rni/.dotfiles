@@ -3,3 +3,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Add .local/bin to path
 export PATH=$HOME/.local/scripts:$PATH
+
+# Add go path
+export PATH=$PATH:$HOME/go/bin
