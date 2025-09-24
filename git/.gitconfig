@@ -1,5 +1,9 @@
+[http]
+
+[http "https://github.com"]
+	proxy = http://bwsg2.int.ofac.ch:3128
 [user]
-	email = gmigan.a@gmail.com
+	email = gandonou@ofac.ch
 	name = Antony Gandonou migan
-[init]
-	defaultBranch = main
+[credential]
+    helper = cache --timeout=7200

@@ -258,8 +258,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym $mod+Shift+period exec systemctl suspend
 
 # Monitor
-set $top-monitor HDMI-A-0
-set $main-monitor eDP
+set $top-monitor Virtual2
+set $main-monitor Virtual1
 
 # Workspace variables
 set $workspace1 "1"
@@ -288,18 +288,20 @@ workspace $workspace10 output $top-monitor
 
 
 # Assign application to workspaces
-assign [class="Bitwarden"] $workspace5
-assign [class="Firefox"] $workspace1
-assign [class="Slack"] $workspace4
-assign [class="Joplin"] $workspace4
+# assign [class="Bitwarden"] $workspace5
+# assign [class="Firefox"] $workspace1
+# assign [class="Slack"] $workspace4
+# assign [class="Joplin"] $workspace4
 
 # Load at startup
-exec firefox
-exec bitwarden
-exec slack
-exec joplin
-exec protonvpn-app
+#exec firefox
+#exec bitwarden
+#exec slack
+#exec joplin
+#exec protonvpn-app
 
-# Used "arandr" cmd to copy configuration of screen placement
-exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --off
+# Used "xrandr" cmd to copy configuration of screen placement
+# exec_always xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --off
+exec_always xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal
+#exec_always xrandr -s 1920x1080
 exec_always feh --bg-scale $HOME/wallpaper.webp
